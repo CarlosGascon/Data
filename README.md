@@ -23,8 +23,8 @@ Results of the numerical stability maps, used to generate figure 1.
 
 #### Comments
 
-- Files are named similarly to the Figures data. _mplot and _eplot are added to distinguish which plot is the file referring to. 
--
+- Files are named similarly to the Figures data. mplot and eplot are added to distinguish which plot the file is referring to. 
+- 
 
 ## Systems Prioritization
 
@@ -41,8 +41,14 @@ Data used to calculate the dynamically stable completeness and generate the sing
   - OccGrids: Occurrence rates grids, where each bin value is multiplied by the bin area.  
   - StabCompGrids: Stable completeness grids (StabDoS * Occ).
 - Res.mat contains the stable depth-of-search and completeness results for all 213 systems, stored in a table with the following columns:
-  - Target
-  - 
+  - Target: Name of the system and planet letter
+  - Distance: System's distance in [pc]
+  - sma: Known planet's semi-major axis in [AU]
+  - ecc: Known planet's eccentricity
+  - mp: Known planet's mass in [Mjup]
+  - StabDoS: Stable depth-of-search
+  - StabComp: Stable completeness 
+  
 ## General Comments
 
 - G, H and P refer to Giuppone's, the Hill AMD and Petrovich's stability criteria respectively.
