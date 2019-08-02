@@ -25,7 +25,7 @@ Results of the numerical stability maps used to generate figure 1.
 
 - Files are always named as "Target_element", where "Target" is the name of the system and "element" can be:  
   - a (or R or m) centers: Arrays defining the bin centers corresponding to the grid where Stab is calculated (see General Comments). 
-  - StabNum: Simulation lifetime matrix in [log10(yr)]
+  - StabNum: Simulation lifetime matrix in [log10(yr)].
   - info: Struct containing the target's main information. 
 - When needed, "mplot" and "eplot" are added to the file name in order to distinguish which kind of plot the file is referring to. 
 
@@ -36,24 +36,25 @@ Data used to calculate the dynamically stable completeness and generate the sing
 #### Comments
 
 - Data is divided into the following folders:
-  - Datalimits: 4-element array containing the semi-major axis (a) and planetary radius (R) imageable limits [amin, amax, Rmin, Rmax], calculated together with the depth-of-search grids using Garret's code (see General Comments). 
+  - Datalimits: 4-element array containing the semi-major axis (a) and planetary radius (R) imageable limits [amin, amax, Rmin, Rmax], calculated together with the depth-of-search grids using Garrett's code (see General Comments). 
   - Edges: Arrays containing the a and R bin edges corresponding to the grids where the calculations are performed. 
-  - DoSGrids: Depth-of-search grids calculated using Garret's code (see General Comments). 
+  - DoSGrids: Depth-of-search grids calculated using Garrett's code (see General Comments). 
   - StabGrids: Stability grids. 
   - StabDoSGrids: Stable depth-of-search grids (calculated as Stab * DoS). 
   - OccGrids: Occurrence rates grids calculated using the SAG13 parametric fit, where each bin value is also multiplied by the bin area.  
   - StabCompGrids: Stable completeness grids (calculated as StabDoS * Occ).
-- Res.mat contains the stable depth-of-search and completeness results for all 213 systems, stored in a table with the following columns:
-  - Target: Name of the system and planet letter
-  - Distance: System's distance in [pc]
-  - sma: Known planet's semi-major axis in [AU]
-  - ecc: Known planet's eccentricity
-  - mp: Known planet's mass in [Mjup]
+- Res.mat contains the stable depth-of-search and completeness results for all 213 single-planet systems, stored in a table with the following columns:
+  - Target: Name of the system and planet letter.
+  - Distance: System's distance in [pc].
+  - sma: Known planet's semi-major axis in [AU].
+  - ecc: Known planet's eccentricity.
+  - mp: Known planet's mass in [Mjup].
   - StabDoS: Stable depth-of-search (this column is calculated for each stability criterion).
   - StabComp: Stable completeness (this column is given for each stability criterion). 
   
 ## General Comments
 
-- G, H and P refer to Giuppone's, the Hill AMD and Petrovich's stability criteria, respectively.
 - 
+- G, H and P refer to Giuppone's, the Hill AMD and Petrovich's stability criteria, respectively.
+- Depth-search is calculated using Garrett's code, available at: https://github.com/dgarrett622/DoS
 
