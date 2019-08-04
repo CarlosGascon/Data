@@ -54,7 +54,8 @@ Data used to calculate the dynamically stable completeness and generate the sing
   
 ## General Comments
 
-- 
+- When center values are given, the corresponding color matrix (e.g. Stab or DoS) accounts for the results obtained exactly at the grid points defined by acenter and Rcenters (or mcenters). If matrix is Nr x Na, then acenters and rcenters have Na and Nr points respectively. 
+- When edge values are given, the corresponding color matrix (e.g. Stab or DoS) accounts for the values obtained as the average of the results calculated at the edges of each bin defined by aedges and Redges (or medges). If matrix is Nr x Na, then aedges and redges have Na + 1 and Nr + 1 points respectively.
 - G, H and P refer to Giuppone's, the Hill AMD and Petrovich's stability criteria, respectively.
 - Depth-search is calculated using Garrett's code, available at: https://github.com/dgarrett622/DoS
 
