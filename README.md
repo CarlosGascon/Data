@@ -19,10 +19,10 @@ Plots and data used for figures 2, 3, 4 and 5.
 
 ## Numerical Simulations
 
-Results of the numerical stability maps used to generate figure 1. 
+Results of the simulations used to generate the numerical stability maps presented in figure 1. 
 
 #### Comments
-
+- The folder "Data" contains the .mat files used to generate the graphics, while the folder "Plots" contains the plot from Figure 1 in .eps format.
 - Files are always named as "Target_element", where "Target" is the name of the system and "element" can be:  
   - a (or R or m) centers: Arrays defining the bin centers corresponding to the grid where Stab is calculated (see General Comments). 
   - StabNum: Simulation lifetime matrix in [log10(yr)].
@@ -50,12 +50,12 @@ Data used to calculate the dynamically stable completeness and generate the sing
   - ecc: Known planet's eccentricity.
   - mp: Known planet's mass in [Mjup].
   - StabDoS: Stable depth-of-search (this column is calculated for each stability criterion).
-  - StabComp: Stable completeness (this column is given for each stability criterion). 
+  - StabComp: Stable completeness (this column is calculated for each stability criterion). 
   
 ## General Comments
 
-- When center values are given, the corresponding color matrix (e.g. Stab or DoS) accounts for the results obtained exactly at the grid points defined by acenter and Rcenters (or mcenters). If matrix is Nr x Na, then acenters and rcenters have Na and Nr points respectively. 
+- When center values are given, the corresponding color matrix (e.g. Stab or DoS) accounts for the results obtained exactly at the grid points defined by acenters and Rcenters (or mcenters). If matrix is Nr x Na, then acenters and Rcenters have Na and Nr points respectively. 
 - When edge values are given, the corresponding color matrix (e.g. Stab or DoS) accounts for the values obtained as the average of the results calculated at the edges of each bin defined by aedges and Redges (or medges). If matrix is Nr x Na, then aedges and redges have Na + 1 and Nr + 1 points respectively.
 - G, H and P refer to Giuppone's, the Hill AMD and Petrovich's stability criteria, respectively.
-- Depth-search is calculated using Garrett's code, available at: https://github.com/dgarrett622/DoS
+- Depth-of-search is calculated using Garrett's code, available at: https://github.com/dgarrett622/DoS
 
