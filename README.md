@@ -8,7 +8,7 @@ Results of the simulations used to generate the numerical stability maps present
 
 #### Comments
 - The folder "Data" contains the .mat files obtained from the numerical simulations and used to generate the graphics, while the folder "Plots" contains the plot from Figure 1 in .eps format.
-- Files are always named as "Target_element", where "Target" is the name of the system and "element" can be:  
+- Data files are always named as "Target_element", where "Target" is the name of the system and "element" can be:  
   - a (or e or m) centers: Arrays defining the bin centers corresponding to the grid where StabNum is calculated (see General Comments). 
   - StabNum: Simulation lifetime matrix in [log10(yr)].
   - info: Struct containing the target's main information. 
@@ -24,7 +24,7 @@ Data used to calculate the dynamically stable completeness and generate the sing
   - Datalimits: 4-element array containing the semi-major axis (a) and planetary radius (R) imageable limits [amin, amax, Rmin, Rmax], calculated, together with the depth-of-search grids, using Garrett's code (see General Comments). 
   - Edges: Arrays containing the a and R bin edges (logarithmically spaced) corresponding to the grids where the calculations are performed. 
   - DoSGrids: Depth-of-search grids calculated using Garrett's code (see General Comments). 
-  - StabGrids: Stability grids for each stability criterion. 
+  - StabGrids: Stability grids for each stability criterion considered. 
   - StabDoSGrids: Stable depth-of-search grids (calculated as StabGrid .* DoSGrid). 
   - OccGrids: Occurrence rates grids calculated using the SAG13 parametric fit, where each bin value is also multiplied by the bin area.  
   - StabCompGrids: Stable completeness grids (calculated as StabDoSGrid .* OccGrid).
@@ -38,7 +38,7 @@ Data used to calculate the dynamically stable completeness and generate the sing
   - StabComp: Stable completeness (this column is calculated for each stability criterion). 
   
 ## General Comments
-- Planetary mass (m), Planetary radius (R) and semi-major axis (a) are always expressed in units of [Mjup], [R_earth] and astronomical units [AU], respectively.
+- Planetary mass (m), planetary radius (R) and semi-major axis (a) are always expressed in [Mjup], [R_earth] and [AU], respectively.
 - When center values are given, the corresponding matrix accounts for the results obtained exactly at the grid points defined by acenters and ecenters (or mcenters). Therefore, if matrix is Nm x Na, then acenters and mcenters have Na and Nm points, respectively.
 - When edge values are given, the corresponding matrix accounts for the values obtained as the average of the results calculated at the edges of each bin defined by aedges and Redges. Therefore, if matrix is Nr x Na, then aedges and Redges have Na + 1 and Nr + 1 points, respectively.
 - In most cases, the known planet's mass corresponds to the minimum value mp * sinI.
