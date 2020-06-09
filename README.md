@@ -7,12 +7,12 @@ The following repository contains all the data corresponding to the numerical si
 Results of the simulations used to generate the numerical stability maps presented in Figure 1. 
 
 #### Comments
-- The folder "Data" contains the .mat files used to generate the graphics, while the folder "Plots" contains the plot from Figure 1 in .eps format.
+- The folder "Data" contains the .mat files obtained from the numerical simulations and used to generate the graphics, while the folder "Plots" contains the plot from Figure 1 in .eps format.
 - Files are always named as "Target_element", where "Target" is the name of the system and "element" can be:  
-  - a (or e or m) centers: Arrays defining the bin centers corresponding to the grid where Stab is calculated (see General Comments). 
+  - a (or e or m) centers: Arrays defining the bin centers corresponding to the grid where StabNum is calculated (see General Comments). 
   - StabNum: Simulation lifetime matrix in [log10(yr)].
   - info: Struct containing the target's main information. 
-- When needed, "mplot" and "eplot" are added to the file name in order to distinguish which kind of plot the file is referring to. 
+- When needed, "mplot" and "eplot" are added to the file name in order to determine which kind of plot the file is referring to. 
 
 ## Systems Prioritization
 
