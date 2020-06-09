@@ -38,10 +38,10 @@ Data used to calculate the dynamically stable completeness and generate the sing
   - StabComp: Stable completeness (this column is calculated for each stability criterion). 
   
 ## General Comments
-
+- Planetary mass (m), Planetary radius (R) and semi-major axis (a) are always expressed in units of [Mjup], [R_earth] and astronomical units [AU], respectively.
 - When center values are given, the corresponding matrix accounts for the results obtained exactly at the grid points defined by acenters and ecenters (or mcenters). Therefore, if matrix is Nm x Na, then acenters and mcenters have Na and Nm points, respectively.
 - When edge values are given, the corresponding matrix accounts for the values obtained as the average of the results calculated at the edges of each bin defined by aedges and Redges. Therefore, if matrix is Nr x Na, then aedges and Redges have Na + 1 and Nr + 1 points, respectively.
-- In most cases, the Known planet's mass corresponds to the minimum value mp * sinI.
+- In most cases, the known planet's mass corresponds to the minimum value mp * sinI.
 - G, H and P refer to Giuppone's, the Hill AMD and Petrovich's stability criteria, respectively.
 - Depth-of-search is calculated using Garrett's code, available at: https://github.com/dgarrett622/DoS .
 
