@@ -21,13 +21,13 @@ Data used to calculate the dynamically stable completeness and generate the sing
 #### Comments
 
 - Data is divided into the following folders:
-  - Datalimits: 4-element array containing the semi-major axis (a) and planetary radius (R) imageable limits [amin, amax, Rmin, Rmax], calculated together with the depth-of-search grids using Garrett's code (see General Comments). 
+  - Datalimits: 4-element array containing the semi-major axis (a) and planetary radius (R) imageable limits [amin, amax, Rmin, Rmax], calculated, together with the depth-of-search grids, using Garrett's code (see General Comments). 
   - Edges: Arrays containing the a and R bin edges (logarithmically spaced) corresponding to the grids where the calculations are performed. 
   - DoSGrids: Depth-of-search grids calculated using Garrett's code (see General Comments). 
-  - StabGrids: Stability grids. 
-  - StabDoSGrids: Stable depth-of-search grids (calculated as Stab * DoS). 
+  - StabGrids: Stability grids for each stability criterion. 
+  - StabDoSGrids: Stable depth-of-search grids (calculated as StabGrid .* DoSGrid). 
   - OccGrids: Occurrence rates grids calculated using the SAG13 parametric fit, where each bin value is also multiplied by the bin area.  
-  - StabCompGrids: Stable completeness grids (calculated as StabDoS * Occ).
+  - StabCompGrids: Stable completeness grids (calculated as StabDoSGrid .* OccGrid).
 - Res.mat contains the stable depth-of-search and completeness results for all 213 single-planet systems, stored in a table with the following columns:
   - Target: Name of the system and planet letter.
   - Distance: System's distance in [pc].
