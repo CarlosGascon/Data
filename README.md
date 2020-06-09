@@ -9,7 +9,7 @@ Results of the simulations used to generate the numerical stability maps present
 #### Comments
 - The folder "Data" contains the .mat files obtained from the numerical simulations and used to generate the graphics, while the folder "Plots" contains the plot from Figure 1 in .eps format.
 - Data files are always named as "Target_element", where "Target" is the name of the system and "element" can be:  
-  - a (or e or m) centers: Arrays defining the bin centers corresponding to the grid where StabNum is calculated (see General Comments). 
+  - a (or e or m) centers: Arrays defining the bin centers corresponding to the grid where StabNum is calculated (see General Comments). Eccentricity (e) values are linearly spaced, while semi-major axis (a) and planetary mass (m) values are logarithmically spaced. 
   - StabNum: Simulation lifetime matrix in [log10(yr)].
   - info: Struct containing the target's main information. 
 - When needed, "mplot" and "eplot" are added to the file name in order to determine which kind of plot the file is referring to. 
