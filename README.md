@@ -22,7 +22,7 @@ Data used to calculate the dynamically stable completeness and generate the sing
 
 - Data is divided into the following folders:
   - Datalimits: 4-element array containing the semi-major axis (a) and planetary radius (R) imageable limits [amin, amax, Rmin, Rmax], calculated, together with the depth-of-search grids, using Garrett's code (see General Comments). 
-  - Edges: Arrays containing the a and R bin edges (logarithmically spaced) corresponding to the grids where the calculations are performed. 
+  - Edges: Arrays containing the a and R bin edges (logarithmically spaced) corresponding to the grids where the calculations are performed (see General Comments). 
   - DoSGrids: Depth-of-search grids calculated using Garrett's code (see General Comments). 
   - StabGrids: Stability grids for each stability criterion considered. 
   - StabDoSGrids: Stable depth-of-search grids (calculated as StabGrid .* DoSGrid). 
