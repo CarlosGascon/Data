@@ -1,6 +1,6 @@
 # Data
 
-The following repository contains all the data corresponding to the numerical simulations and the systems prioritization, divided into two folders: Numerical Simulations and Systems Prioritization.
+The following repository contains all the data corresponding to the numerical simulations and the systems prioritization, divided into two main folders: Numerical Simulations and Systems Prioritization.
 
 ## Numerical Simulations
 
@@ -16,13 +16,13 @@ Results of the simulations used to generate the numerical stability maps present
 
 ## Systems Prioritization
 
-Data used to calculate the dynamically stable completeness and generate the single-planet systems ranking. 
+Data used to calculate the dynamically stable completeness and generate the single-planet systems prioritization. 
 
 #### Comments
 
 - Data is divided into the following folders:
   - Datalimits: 4-element array containing the semi-major axis (a) and planetary radius (R) imageable limits [amin, amax, Rmin, Rmax], calculated together with the depth-of-search grids using Garrett's code (see General Comments). 
-  - Edges: Arrays containing the a and R bin edges corresponding to the grids where the calculations are performed. 
+  - Edges: Arrays containing the a and R bin edges (logarithmically spaced) corresponding to the grids where the calculations are performed. 
   - DoSGrids: Depth-of-search grids calculated using Garrett's code (see General Comments). 
   - StabGrids: Stability grids. 
   - StabDoSGrids: Stable depth-of-search grids (calculated as Stab * DoS). 
